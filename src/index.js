@@ -1,17 +1,23 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import './index.scss';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
-);
+const card = document.querySelectorAll(".card");
+const link = document.querySelectorAll(".link");
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+fetch("data.json")
+  .then((response) => {
+    if (!response.ok) {
+      throw new Error(`HTTP error! Status: ${response.status}`);
+    }
+    return response.json();
+  })
+  .then((data) => {
+    card.forEach((card, index) => {
+      const title = card.querySelector(".card-type");
+      const current = card.querySelector(".current-hours");
+      const previous = card.querySelector(".previoud-hours");
+
+      title.textContent = data[index].title;
+      current.textContent = data[index].timeframes.weekly.current + "hrs";
+      previous.textContent = "Last Week - " + data[index].timeframes.weekly.previous + "hrs"
+    })
+  })
