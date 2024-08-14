@@ -47,6 +47,23 @@
     }
 
     .profile-bottom {
+        padding: 1.1rem 2rem;
 
+        .profile-bottom-container {
+            display: flex;
+            justify-content: space-between;
+
+            a {
+                text-decoration: none;
+            }
+
+            .link {
+                color: var(--desaturated-blue);
+            }
+
+            .activated-link {
+                color: white;
+            }
+        }
     }
 }
