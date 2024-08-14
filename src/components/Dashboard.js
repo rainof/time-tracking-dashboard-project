@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Profile from './Profile';
 import Card from './Card';
+import '../styles/Dashboard.scss'
 
 const Dashboard = () => {
   const [data, setData] = useState([]);

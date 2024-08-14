@@ -1,11 +1,13 @@
 import React from 'react';
+import '../styles/Profile.scss';
+import profileImg from '../assets/images/image-jeremy.png';
 
 const Profile = () => {
   return (
     <div className="profile-container">
       <div className="profile-top">
         <div className="top-container">
-          <img src="/assets/images/favicon-32x32.png" alt="Profile" />
+          <img className="top-image" src={profileImg} alt="Profile" />
           <div className="top-info">
             <p>Report for</p>
             <h3>Jeremy Robson</h3>
