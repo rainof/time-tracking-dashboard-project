@@ -2,7 +2,15 @@ import React from 'react';
 import '../styles/Profile.scss';
 import profileImg from '../assets/images/image-jeremy.png';
 
-const Profile = () => {
+const Profile = ({ setTimeframe, timeframe }) => {
+
+  console.log(timeframe);
+
+  const handleTimeframeClick = (event, selectedTimeframe) => {
+    event.preventDefault();
+    setTimeframe(selectedTimeframe);
+  }
+
   return (
     <div className="profile-container">
       <div className="profile-top">
@@ -16,9 +24,27 @@ const Profile = () => {
       </div>
       <div className="profile-bottom">
         <div className="profile-bottom-container">
-          <a className="link" href="#" data-timeframe="daily">Daily</a>
-          <a className="activated-link" href="#" data-timeframe="weekly">Weekly</a>
-          <a className="link" href="#" data-timeframe="monthly">Monthly</a>
+          <a
+            className={timeframe === 'daily' ? 'activated-link' : 'link'}
+            href="#"
+            onClick={(e) => handleTimeframeClick(e, 'daily')}
+          >
+            Daily
+          </a>
+          <a
+            className={timeframe === 'weekly' ? 'activated-link' : 'link'}
+            href="#"
+            onClick={(e) => handleTimeframeClick(e, 'weekly')}
+          >
+            Weekly
+          </a>
+          <a
+            className={timeframe === 'monthly' ? 'activated-link' : 'link'}
+            href="#"
+            onClick={(e) => handleTimeframeClick(e, 'monthly')}
+          >
+            Monthly
+          </a>
         </div>
       </div>
     </div>

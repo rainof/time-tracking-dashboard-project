@@ -5,6 +5,7 @@ import '../styles/Dashboard.scss'
 
 const Dashboard = () => {
   const [data, setData] = useState([]);
+  const [timeframe, setTimeframe] = useState('weekly'); // default to weekly
 
   useEffect(() => {
     fetch('data.json')
@@ -20,9 +21,9 @@ const Dashboard = () => {
 
   return (
     <div className="App">
-      <Profile />
+      <Profile setTimeframe={setTimeframe} timeframe={timeframe}/>
       {data.map((item, index) => (
-        <Card key={index} data={item} />
+        <Card key={index} data={item} timeframe={timeframe} />
       ))}
     </div>
   );
