@@ -23,7 +23,7 @@ const Dashboard = () => {
     <div className="App">
       <Profile setTimeframe={setTimeframe} timeframe={timeframe}/>
       {data.map((item, index) => (
-        <Card key={index} data={item} timeframe={timeframe} />
+        <Card key={index} data={item} timeframe={timeframe} index={index} />
       ))}
     </div>
   );

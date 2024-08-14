@@ -1,0 +1,82 @@
+.card {
+    margin-top: 24px;
+    width: 87.2%;
+    height: auto;
+    border-radius: 15px;
+
+    .card-bottom {
+        padding: 1.5rem;
+        background-color: var(--dark-blue);
+        border-radius: 15px;
+
+        .card-bottom-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .card-type {
+                padding: 0;
+                margin: 0;
+                font-size: 1rem;
+                font-weight: 500;
+                color: white;
+            }
+
+            .button {
+                border-style: none;
+                background-color: var(--dark-blue);
+
+                .etc {
+                    color: var(--pale-blue);
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        .card-bottom-body {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.4rem;
+
+            .current-hrs {
+                color: white;
+                font-size: 32px;
+                font-weight: 300;
+                padding: 0;
+                margin: 0;
+            }
+
+            .previous-hrs {
+                color: var(--pale-blue);
+                font-size: 15px;
+                padding: 0;
+                margin: 0;
+            }
+        }
+    }
+}
+
+.color-0 {
+    background-color: var(--work-light-red);
+}
+
+.color-1 {
+    background-color: var(--play-soft-blue);
+}
+
+.color-2 {
+    background-color: var(--study-light-red);
+}
+
+.color-3 {
+background-color: var(--exercise-lime-green);
+}
+
+.color-4 {
+    background-color: var(--social-violet);
+}
+
+.color-5 {
+    background-color: var(--care-soft-orange);
+}
