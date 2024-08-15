@@ -108,7 +108,7 @@
 
 //////////////////////////////
 
-@media (min-width: 1100px) {
+@media (min-width: 1125px) {
     .card {
         width: 255px;
         height: 244px;
@@ -123,6 +123,7 @@
             padding: 29px 35px 32px 30px;
             background-color: var(--dark-blue);
             border-radius: 15px;
+            cursor: pointer;
 
             .card-bottom-header {
                 display: flex;
@@ -139,12 +140,19 @@
 
                 .button {
                     border-style: none;
-                    background-color: var(--dark-blue);
+                    background-color: transparent;
                     padding: 0;
+                    cursor: pointer;
 
                     .etc {
                         color: var(--pale-blue);
                         font-size: 2rem;
+                    }
+
+                    &:hover {
+                        .etc {
+                            filter: brightness(0) invert(1);
+                        }
                     }
                 }
             }
@@ -171,6 +179,10 @@
                     margin-top: 8px;
                 }
             }
+        }
+
+        .card-bottom:hover {
+            background-color: var(--midnight-blue);
         }
     }
 
