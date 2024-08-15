@@ -7,6 +7,11 @@ const Card = ({ data, timeframe, index }) => {
 
   const currentHours = data.timeframes[timeframe].current;
   const previousHours = data.timeframes[timeframe].previous;
+  const timeframeMapping = {
+    daily: "Day",
+    weekly: "Week",
+    monthly: "Month"
+  };
 
   return (
     <div className={`card color-${index % 6}`}>
@@ -20,7 +25,9 @@ const Card = ({ data, timeframe, index }) => {
         </div>
         <div className="card-bottom-body">
           <h3 className="current-hrs">{currentHours}hrs</h3>
-          <p className="previous-hrs">Last {timeframe.charAt(0).toUpperCase() + timeframe.slice(1)} - {previousHours}hrs</p>
+          <p className="previous-hrs">
+            Last {timeframeMapping[timeframe.toLowerCase()]} - {previousHours}hrs
+          </p>
         </div>
       </div>
     </div>
