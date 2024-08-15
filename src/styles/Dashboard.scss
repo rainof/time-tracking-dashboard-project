@@ -20,11 +20,73 @@ body {
     }
 }
 
+//////////////////////////////
+
+@media (min-width: 530px) and (max-width: 899px) {
+    body {
+        background-color: var(--very-dark-blue);
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #root {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .App {
+                padding: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto 1fr 1fr 1fr;
+                gap: 30px;
+                width: 87vw;
+            }
+        }
+    }
+}
+
+//////////////////////////////
+
+@media (min-width: 900px) and (max-width: 1124px) {
+    body {
+        background-color: var(--very-dark-blue);
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        #root {
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .App {
+                padding: 0;
+                margin: 0;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: auto 1fr 1fr 1fr;
+                gap: 30px;
+                width: 87vw;
+            }
+        }
+    }
+}
+
+//////////////////////////////
+
 @media (min-width: 1125px) {
     body {
         background-color: var(--very-dark-blue);
         padding: 0;
-        margin: 24.6vh 0;
+        margin: 21vh 0;
         display: flex;
         justify-content: center;
         align-items: center;
