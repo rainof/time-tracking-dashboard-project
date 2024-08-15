@@ -1,3 +1,5 @@
+@import '../index.scss';
+
 .card {
     margin-top: 24px;
     width: 87.2%;
@@ -21,7 +23,7 @@
             .card-type {
                 padding: 0;
                 margin: 0;
-                font-size: 1rem;
+                font-size: 18px;
                 font-weight: 500;
                 color: white;
             }
@@ -102,4 +104,122 @@
     background-image: url("../assets/images/icon-self-care.svg");
     background-repeat: no-repeat;
     background-position: calc(100% - 18px) -10px;
+}
+
+//////////////////////////////
+
+@media (min-width: 1100px) {
+    .card {
+        width: 255px;
+        height: 244px;
+        border-radius: 15px;
+        margin: 0;
+
+        .card-top {
+            padding-top: 45px;
+        }
+
+        .card-bottom {
+            padding: 29px 35px 32px 30px;
+            background-color: var(--dark-blue);
+            border-radius: 15px;
+
+            .card-bottom-header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .card-type {
+                    padding: 0;
+                    margin: 0;
+                    font-size: 18px;
+                    font-weight: 500;
+                    color: white;
+                }
+
+                .button {
+                    border-style: none;
+                    background-color: var(--dark-blue);
+                    padding: 0;
+
+                    .etc {
+                        color: var(--pale-blue);
+                        font-size: 2rem;
+                    }
+                }
+            }
+
+            .card-bottom-body {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: start;
+                margin: 0;
+
+                .current-hrs {
+                    color: white;
+                    font-size: 56px;
+                    font-weight: 300;
+                    padding: 0;
+                    margin-top: 24px;
+                }
+
+                .previous-hrs {
+                    color: var(--pale-blue);
+                    font-size: 15px;
+                    padding: 0;
+                    margin-top: 8px;
+                }
+            }
+        }
+    }
+
+    .color-0 {
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        background-color: var(--work-light-red);
+        background-image: url("../assets/images/icon-work.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 17.42px) -10.91px;
+
+    }
+
+    .color-1 {
+        grid-column: 3 / 4;
+        grid-row: 1 / 2;
+        background-color: var(--play-soft-blue);
+        background-image: url("../assets/images/icon-play.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 25px) -5px;
+    }
+
+    .color-2 {
+        grid-column: 4 / 5;
+        grid-row: 1 / 2;
+        background-color: var(--study-light-red);
+        background-image: url("../assets/images/icon-study.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 17.07px) -6.05px;
+    }
+
+    .color-3 {
+        background-color: var(--exercise-lime-green);
+        background-image: url("../assets/images/icon-exercise.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 17.62px) -0.42px;
+    }
+
+    .color-4 {
+        background-color: var(--social-violet);
+        background-image: url("../assets/images/icon-social.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 16px) -15px;
+    }
+
+    .color-5 {
+        background-color: var(--care-soft-orange);
+        background-image: url("../assets/images/icon-self-care.svg");
+        background-repeat: no-repeat;
+        background-position: calc(100% - 18px) -10px;
+    }
 }
