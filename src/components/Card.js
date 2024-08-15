@@ -10,7 +10,7 @@ const Card = ({ data, timeframe, index }) => {
 
   return (
     <div className={`card color-${index % 6}`}>
-      <div className="card-top">&nbsp;</div>
+      <div className="card-top"></div>
       <div className="card-bottom">
         <div className="card-bottom-header">
           <h2 className="card-type">{data.title}</h2>
